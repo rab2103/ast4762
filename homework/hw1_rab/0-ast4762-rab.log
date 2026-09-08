@@ -1,0 +1,90 @@
+Robyn Baumann
+Log for AST 4762, Fall 2026
+
+*****IN: Wed Aug 26 15:06:00 EDT 2026
+
+Opened TextEdit, started this log, saved as:
+/home/robynbaumann/downloads/0-ast4762-rab.log
+Name: Robyn Baumann
+Username: rab
+What astronomy classes have you taken? AST2002, Solar System Astronomy, Stellar Astrophysics, and Experimental Methods in Astronomy
+Are you generally comfortable with calculus and physics? Yes
+Have you ever programmed a computer? Yes
+In what language(s)? Python and C
+Have you taken a programming class, and if so which? Intro to C and COP2500
+Have you taken statistics or probability? Yes a long time ago
+Will you be attending the DPS conference this year, or will
+you be away otherwise? I am not sure
+Why are you taking this course? I want to become a better coder and learn how to properly process data.
+Are there particular topics you hope to learn? How to process large amounts of data and make sense of it. 
+If you have programmed outside of a course before, please
+briefly describe: No
+If you have worked with scientific data before, briefly
+describe your experience: Only in excel, with smaller amounts of data. 
+Please describe any projects in astronomy, including
+involvement in amateur groups, owning a telescope,
+research, etc.: I have helped with the cosmic accelerometer project, but it is in the early stages of working on the spectrometer and have not collected data in the field yet.
+
+Explanation: Go to downloads and press with 2 fingers and select “New Folder”. Double click on the folder and select “Rename” and name it hw0_<yourname>/. Next, double click on the log file and select “Duplicate”. Drag the duplicated file and drop it into the hw0 folder. Double click on the folder and select “Compress”. Then go to the web course assignment and click “Select File” and choose the zipped file and submit it.  
+
+*****Out: Wed Aug 26 15:32:00 EDT 2026
+
+*****IN: Wed Aug 26 15:37:00 EDT 2026
+
+Had trouble getting rid of .txt and .rtf, kept getting an error when trying to save file as .log. After a few attempts it stopped giving me the error. 
+
+*****Out: Wed Aug 26 15:39:00 EDT 2026
+
+*****IN: Thurs Aug 27 17:04:00 EDT 2026
+
+Applied for stokes account
+Reading Mac Software Installation and following the guide.
+Trouble finding anaconda after install...
+Found it in /opt, moved to /Desktop
+On step 2.4 I was getting that none of the files existed. Not sure where it went wrong
+Got the .bash_profile to appear.
+Got the class packages installed and Homebrew to /opt
+Got unknown command for brew cask
+Cask no longer valid, home-brew changed it to just brew!
+Appears that I finished the Mac software install.
+
+*****OUT: Thurs Aug 27 17:02:00 EDT 2026
+
+*****IN: Fri Aug 28 13:05:00 EDT 2026
+
+Started on virtual box download
+Tried to do GitHub, but there is a file missing: learngit.pdf, emailed Dr. Harrington
+Ubuntu and visual box downloaded after a long time, but they are not opening.
+Got Virtual box open! However directions do not cover all settings, will wait until in-class to set up virtual machine.
+
+*****OUT: Fri Aug 28 14:19:00 EDT 2026
+
+*****IN: Fri Aug 28 14:35:00 EDT 2026
+
+Checking that all proper files are installed, prepping for HW1
+Tried to get on stokes but it said "Connection Closed" after entering the Password
+Started HW1:
+	Problem 1:
+		created hw folder: /hw1_rab
+	Problem 2:
+		took picture of Jupyter notebook screen with control+shift+4 named 
+		hw1_rab_problem2_image1.png and added to file /hw1_rab
+		took picture of GitHub after creating ast4762 Respository with control+shift+4
+		named: hw1_rab_problem2_image2.png and added to file /hw1_rab
+		Phython Version: 
+	Problem 3: 
+		Unable to get connected to stokes, but took a screenshot of the attempt with 
+		control+shift+4 and named hw1_rab_problem3_image1.png and added to file /hw1_rab
+	Problem 4: Create a copy of 0-ast4762-rab.log by double clicking on it and selecting "Duplicate" and drag into the /hw1_rab folder. Double click on the file and select "Rename" and get rid of "copy" in the name at the end so it matches the original file name. Exit the hw1_rab folder and double click on the folder again and select "Compress" to turn into a zip file. Then go to the web course assignment and click “Select File” and choose the zipped file and submit it. 
+
+Going to submit even with Stokes not working, and recommended to try again on Monday before class. If I can get in on Monday I will resubmit the file then. 
+
+*****OUT: Fri Aug 28 15:47:00 EDT 2026
+
+*****IN: Sun Aug 30 16:31:00 EDT 2026
+
+Attempted to log into stokes to see if it was working. It did, so re-did that portion of HW1:
+Problem 3: Logged into stokes, types ls and hit enter but no output occurred. Took screenshot with control+shift+4 and named hw1_rab_problem3_image1.png. Deleted the old image out of hw1 folder and added the new photo to file /hw1_rab. 
+Redid the directions above for Problem 4 and re-submitted to webcourses.
+
+*****OUT: Sun Aug 30 16:42:00 EDT 2026
