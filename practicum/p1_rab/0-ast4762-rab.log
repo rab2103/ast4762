@@ -191,6 +191,63 @@ h) a. cp 0-ast4762-rab.log ./homework/hw2_rab then I will do scp -r /Users/robyn
    c. Use scp ro235529@stokes.ist.ucf.edu:~hw2_rab.tar.gz /Users/robynbaumann/ast4762/homework/handin
    d. Then open web courses, "Select file" and navigate to the handing folder in finder and select the tar file and hit submit.
 
-*****OUT: Tue Sep 8 21:22:00 EDT 2026  
+*****OUT: Tue Sep 8 21:22:00 EDT 2026 
 
+*****IN: Wed Sep 9 14:31:00 EDT 2026
 
+Just saw the announcement (I've been at work since 10:30am) that the slur file in not needed. It was included in HW2 folder but Cameron (TA) said it won't affect the grade since there was so much confusion going on. Began working on Week 3 work, with more examples in python and a talk on accuracy vs. precision and types of errors.
+
+*****OUT: Wed Sep 9 16:22:00 EDT 2026
+
+*****IN: Fri Sep 11 14:28:00 EDT 2026
+
+Hopped on the zoom for class. Finished the notes file from Wednesday (in the week 3 folder in notes). Then we reviewed HW2 and did one of the peer reviews. Finally, we spent the last 20 min of class working on the practicum:
+
+Problem 1:
+It took me a few tries to get the proper numbers for the ranges of the loops. Sometimes it was too much white or too much black, ended up looping through a square, as I could not get it to do it without doing this.
+For the non-loop, the transpose did not work, and I tried doing what the prof did with .shape (didn't work) so then used .reshape and that worked.
+Took screenshots to show the code and plots, could not get it into one picture or even 2, so I labeled them as: 
+Loop code: p1_rab_problem1_image1.png
+Loop graph: p1_rab_problem1_image2.png
+No-Loop code: p1_rab_problem1_image3.png
+No-Loop graph: p1_rab_problem1_image4.png
+
+Problem 2: 
+Below are the prompts, followed by the name of the screenshot: 
+AI Prompt: 
+1st: Please create a 300×200 Float64 array with numpy. Each array element should contain its own y coordinate, starting with y = 0 for column 0 and ending with y = 299 for column 299. Write this code using loops. 
+p1_rab_problem2_image1.png
+
+2nd Prompt: Now print the image created by this 2D array
+p1_rab_problem2_image2.png
+
+3rd: Can you show the image?
+p1_rab_problem2_image3.png
+
+4th: turn it 90 degrees and be sure the axis has numbers in increments of 50 and labels
+p1_rab_problem2_image4.png
+
+5th: put 0,0 in the bottom left corner and it should be black at the bottom, white at the top
+p1_rab_problem2_image5.png
+
+6th: now write a code that does the same thing, but does not require loops, and instead uses numpy and an array called y
+p1_rab_problem2_image6.png
+p1_rab_problem2_image7.png
+
+7th: show the graph
+p1_rab_problem2_image8.png
+
+*****OUT: Fri Sep 11 17:18:00 EDT 2026
+
+*****IN: Sat Sep 12 14:21:00 EDT 2026
+
+Continue with practicum 1:
+Problem 3: 
+I already downloaded Astropy when I installed all the packages for the class. 
+Used fits.info('m42_40min_ir.zip') and fits.getheader('m42_40min_ir.zip') To read the fits file. Then saved the data with: data = fits.getdata('m42_40min_ir.zip')
+Then added a x-axis label of Right ascension and a y-axis label of declination. I believe this is the Orion Nebula (and I looked up M42 which is the Orion Nebula) but am not entirely sure, went ahead and labeled the images at "Nebula (Orion) and Robyn" because the directions wanted my name in it, but did not specify format lol. I also changed the image to grayscale.
+Saved the image using the plt.davefig('p1_rab_problem3_image1.png') to save th image as a png under the correct naming convention.
+
+For submission, I also included a traditional .py file as well as the Jupyter notebook file that is the original. I also am copying over this log now to submit it. I will then create a tar using shell commands and submit it.
+
+*****OUT: Sat Sep 12 14:50:00 EDT 2026
