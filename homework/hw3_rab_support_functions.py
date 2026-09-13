@@ -113,19 +113,19 @@ def squareplot(low, high, num, saveplot=False) :
     y = square(x)
 
     # create the plot
-    plt.figure( figsize = 10,10)
+    plt.figure( figsize = (10,10))
     plt.scatter( x, y)
 
     # add titles and axis labels
     plt.title( 'Square Function' )
-    plt.label( 'Input' )
+    plt.xlabel( 'Input' )
     plt.ylabel( 'Output' )
+
+    # save the figure if they want to
+    if saveplot != False :
+        plt.savefig('hw3_rab_problem3_graph1.pdf')
 
     # show plot
     plt.show()
-
-    # save the figure if they want to
-    if saveplot!=False:
-        plt.savefig('hw3_rab_problem3_graph1.pdf')
 
     return

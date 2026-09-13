@@ -367,7 +367,14 @@ Created function square plot and edited the docstring. The summary and parameter
         Choices in brackets, default first when optional. 
         If changed to True, the plot will be saved as a pdf.
 
-Finished up coding the function, and tried importing it to the main file but got ImportError. Tried saving and re-opening the file, but happened again.
+Finished up coding the function, and tried importing it to the main file but got ImportError. Tried saving and re-opening the file, but happened again. I tried pushing to github, closing and reopening lots of files. After about 20 min used ChatGPT, and eventually tried 
+import importlib
+import hw3_rab_support_functions
+importlib.invalidate_caches()
+And then it worked! Needed to clear the Jupyter notebooks memory essentially. 
+Ran test of both examples and it came out as expected except when I tested the one with saveplot=True it was saving a blank pdf, needed to more plt.show() to be after the boolean, but that did not fix it. Tried clearing cash again and it did not work. The plot is plotting correctly just something is going wrong with the pdf. Pushing to GitHub and logging off for now.
+
+
 
 
 
