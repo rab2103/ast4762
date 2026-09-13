@@ -284,8 +284,40 @@ It contains the functions:
 (d) created function def square(val) with a proper docstring. The summary is: 
 This function takes in a number or array, squares the value(s) and returns the squared value(s).
 Pushed to GitHub with: 
+git add .
+git commit -m "Update 1 of HW3"
+git push origin master
 
+(e) Left and edited as many relevant parts of the docstring as I could. The example I did was: 
+    >>> a=np.array([1,2,3])
+    >>> print( hw3_rab_support_functions.square(a) )
+    >>> [1,4,9]
+Tried it in Jupyter notebook after doing from hw3_rab_support_functions import square it worked!
 
+(f) Tried:
+	1. square(3) 
+		Output: 9
+	2. a = np.arange(0,20,2)
+	   print(square(a))
+		Output: [  0   4  16  36  64 100 144 196 256 324]
+	3. a = np.linspace(-10,10,10)
+	   print(a)
+	   print(square(a))
+		Output: [-10.          -7.77777778  -5.55555556  -3.33333333  -1.11111111
+  	 	  1.11111111   3.33333333   5.55555556   7.77777778  10.        ]
+		[100.          60.49382716  30.86419753  11.11111111   1.2345679
+ 		  1.2345679   11.11111111  30.86419753  60.49382716 100.        ]
+	4. a = np.array([[1,2],[3,4]])
+	   print(square(a))
+		Output: [[ 1  4]
+ 			[ 9 16]]	
+Seems to be working great!!
+
+(g) committed to GitHub again with 
+git add .
+git commit -m "Update 2 of HW3"
+git push origin master
+Went into GitHub and took screenshot with ctrl+shift+4 and named it hw3_rab_problem2_image1.png
 
 
 

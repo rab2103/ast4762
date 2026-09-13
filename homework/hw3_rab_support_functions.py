@@ -11,11 +11,6 @@ import scipy as sp
 import matplotlib.pyplot as plt  
 import astropy.io.fits as fits
 
-
-#if you need to import functions from other files you can do it
-#afterwards like this:
-from my_module import my_func, other_func
-
 def square(val) :
     #this is our function's docstring!
     """This function takes in a number or array, squares the value(s) 
@@ -41,8 +36,9 @@ def square(val) :
 
     Examples
     --------
-    >>> a=[1,2,3]
-    >>> return sq=[1,4,9]
+    >>> a=np.array([1,2,3])
+    >>> print( hw3_rab_support_functions.square(a) )
+    >>> [1,4,9]
     
     Revisions
     ---------
@@ -54,4 +50,3 @@ def square(val) :
     # return the squared value
     return sq
 
-def 
