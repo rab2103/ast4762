@@ -269,5 +269,23 @@ Homework 3:
 Problem 1:
 Opened shell and used ls and cd to navigate: ast4762 -> homework then used mkdir hw3_rab to create the HW3 folder. Opened Jupyter Notebook and created the coding assignment hw3_rab.ipynb to work in there, and saved it to the hw3_rab folder. While transfer to a .py file before turning it in. Created header at the top of the file for my name, assignment, and date. Then imported the libraries needed. Files pushed to Github under "Started HW3" update.
 
+Problem 2:
+(a) Downloaded module_template_with_docstring.py from webcourses. Started my supporting function document by copying that file and renaming it hw3_rab_support_functions.py and moved it into the hw3_rab folder. 
+
+(b) there definitely needs to be docstrings for the file and the functions, so that if you are curious as to what the file is (or what a function does) the docstring tells you what it contains/will do. It also includes the necessary information on inputs and outputs so you know what to pass to the function in order for it to run properly. It is also important to include descriptions in the log, so if you are looking for specific files or functions it is described in your log and makes it easier to find. The doc string for hw3_rab_support_functions.py so far is: 
+"""This is the support function library for hw3_rab in AST4762.
+
+It contains the functions: 
+    'square' which will allow you to square a value or array of values
+"""
+
+(c) To clean up the file I am commenting out the import statements, and will uncomment them as I need them and before finalizing, delete any that went unused as I do not know yet which ones I will need for the functions until after I have written them. For the function square, I entered the necessary information for the doc string and removed a lot of things like references.
+
+(d) created function def square(val) with a proper docstring. The summary is: 
+This function takes in a number or array, squares the value(s) and returns the squared value(s).
+Pushed to GitHub with: 
+
+
+
 
 
