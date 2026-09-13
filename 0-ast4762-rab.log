@@ -281,8 +281,23 @@ It contains the functions:
 
 (c) To clean up the file I am commenting out the import statements, and will uncomment them as I need them and before finalizing, delete any that went unused as I do not know yet which ones I will need for the functions until after I have written them. For the function square, I entered the necessary information for the doc string and removed a lot of things like references.
 
-(d) created function def square(val) with a proper docstring. The summary is: 
-This function takes in a number or array, squares the value(s) and returns the squared value(s).
+(d) created function def square(val) with a proper docstring. The summary, parameters and returns are:
+"""This function takes in a number or array, squares the value(s) 
+    and returns the squared value(s).
+
+    The input is saved as val, then val is squared
+
+    Parameters
+    ----------
+    val : array_like
+        val can be an integer or an array. If val is an array, then
+        all the elements in the array will be squared
+
+    Returns
+    -------
+    sq : array_like
+        sq will be the squared value(s) of val.
+
 Pushed to GitHub with: 
 git add .
 git commit -m "Update 1 of HW3"
@@ -291,7 +306,7 @@ git push origin master
 (e) Left and edited as many relevant parts of the docstring as I could. The example I did was: 
     >>> a=np.array([1,2,3])
     >>> print( hw3_rab_support_functions.square(a) )
-    >>> [1,4,9]
+    [1,4,9]
 Tried it in Jupyter notebook after doing from hw3_rab_support_functions import square it worked!
 
 (f) Tried:
@@ -318,6 +333,42 @@ git add .
 git commit -m "Update 2 of HW3"
 git push origin master
 Went into GitHub and took screenshot with ctrl+shift+4 and named it hw3_rab_problem2_image1.png
+
+(h) created integer array with np.arange, it worked fine
+
+(i) I think he is wanting me to use np.linspace? Not 100% sure what he ment by floats from 0-25, because that is 26 numbers with only 25 spaces for a 5x5 array. Then I used .reshape(5,5) to turn it into a matrix. Passed it to square and it seemed to work fine, checked with calculate for the different elements since they had long decimals as floats.\
+
+Problem 3:
+Created function square plot and edited the docstring. The summary and parameters are: 
+    """This function will create an array from the lowest number 
+    (low) to highest number (high) with the number of entries in 
+    the array (num) and then plot the array and their squares, 
+    with an option to save the plot.
+
+    The low entry will be the first number in an array and the 
+    high entry will be the highest number or arrays. The array
+    will be created with linspace, and the number of values 
+    between low and hig hwill be given by num. Then this function
+    passes the array to square, and with the returned array will
+    then create a plot. There is an option to save the plot as a 
+    pdf if saveplot is set to True, but the default will be False.
+
+    Parameters
+    ----------
+    low : int or float
+        This will be the first number in the linspace array.
+    high : int or float
+        This will be the last number (inclusive) in the 
+        linspace array
+    num : int or float
+        This will be the number of values in the linspace
+        array.
+    saveplot : {'False', 'True'}, optional
+        Choices in brackets, default first when optional. 
+        If changed to True, the plot will be saved as a pdf.
+
+Finished up coding the function, and tried importing it to the main file but got ImportError. Tried saving and re-opening the file, but happened again.
+
 
 
 
