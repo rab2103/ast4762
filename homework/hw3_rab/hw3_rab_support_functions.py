@@ -70,7 +70,7 @@ def squareplot(low, high, num, saveplot=False) :
     high : int or float
         This will be the last number (inclusive) in the 
         linspace array
-    num : int or float
+    num : int 
         This will be the number of values in the linspace
         array.
     saveplot : {'False', 'True'}, optional

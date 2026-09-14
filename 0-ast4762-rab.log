@@ -381,6 +381,61 @@ Ran test of both examples and it came out as expected except when I tested the o
 Back to HW3, Problem 3:
 Tried shutting off the kernel and restarting and it did not work. Then I moved the save plot outside of the if statement and it was working, so figured the problem was with the id statement. Tried saving plot to a variable and passing, still did not work. Finally, since save plot is boolean, I tried simplifying the if statement from the advice of a peer. So rather than having if save plot != False: I changed it to if saveplot : and it worked! Wild. 
 Added gridlines, checked that the x array was inclusive, and adjusted font sizes of the title and axis labels. Push to GitHub to save fix.
+Called the function in the main hw file with the requested example:
+squareplot(1., 7, 5, True)
+It worked! Yay!
+
+Problem 4: 
+Decided to create a rubric using word and saving it as a pdf, I am going to use the rubrics for HW0, HW1, and HW2 as a model. I like how tables look for rubrics, and since it does not have any specific formatting requirements other than it being a pdf I am going to design it this way.
+Student came in for help with(I'm in office hours) so logging off to help.
+
+*****OUT Mon Sep 14 12:05:00 EDT 2026
+
+*****IN Mon Sep 14 13:40:00 EDT 2026
+
+Cont Hw3, Problem 4: 
+Working on the rubric. Completed rubric and save as hw3_rab_problem4_rubric.pdf
+
+Problem 5: 
+(a) First connect to Cisco secure and do the 2-factor authentication. Then Log into 
+stokes with the ssh ro235529@stokes.ist.ucf.edu and entering my passcode.
+ 
+(b) I made a file by typing in stokes:
+mkdir hw3_rab 
+
+(c) I started by saving my Jupyter notebook as a .py file and made sure everything was in the hw3_rab folder. Then in my terminal I did:
+scp -r /Users/robynbaumann/ast4762/homework/hw3_rab/hw3_rab.py ro235529@stokes.ist.ucf.edu:~/hw3_rab 
+scp -r /Users/robynbaumann/ast4762/homework/hw3_rab/hw3_rab_support_functions.py ro235529@stokes.ist.ucf.edu:~/hw3_rab 
+I then opened the dir with cd hw3_rab in stokes
+
+(d) said it needed matplotlib in order to run, went back to stokes instructions to see how to get the module imported
+Followed the steps from the file but kept getting: ModuleNotFoundError: No module named 'matplotlib'
+Tried installing matplotlib again and got: 
+CondaMemoryError: The conda process ran out of memory. Increase system memory and/or try again.
+Talked to Cameron he said to start with these command:
+module load anaconda
+conda activate ast4762
+python3 hw3_rab.py
+IT WORKED YAY
+
+(e) committed to GitHub again with 
+git add .
+git commit -m "Update of HW3"
+git push origin master
+
+f) took a screenshot of the GitHub history with control shift 4, and named it:
+hw3_rab_problem5_image1.png
+Copied it to all appropriate folders
+
+(g) updated stokes with the same scp command from part (c) and all the necessary files names changed
+
+(h) a. cp 0-ast4762-rab.log ./homework/hw3_rab then I will do scp -r /Users/robynbaumann/ast4762/homework/hw3_rab ro235529@stokes.ist.ucf.edu:~/hw3_rab to update the whole stokes file
+   b. In stokes I will use: tar zcf hw3_rab.tar.gz hw3_rab
+   c. Use scp ro235529@stokes.ist.ucf.edu:~hw2_rab.tar.gz /Users/robynbaumann/ast4762/homework/handin
+   d. Then open web courses, "Select file" and navigate to the handing folder in finder and select the tar file and hit submit.
+
+(i) going to do that rn :)
+
 
 
 
