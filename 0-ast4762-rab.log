@@ -374,6 +374,13 @@ importlib.invalidate_caches()
 And then it worked! Needed to clear the Jupyter notebooks memory essentially. 
 Ran test of both examples and it came out as expected except when I tested the one with saveplot=True it was saving a blank pdf, needed to more plt.show() to be after the boolean, but that did not fix it. Tried clearing cash again and it did not work. The plot is plotting correctly just something is going wrong with the pdf. Pushing to GitHub and logging off for now.
 
+*****OUT: Sat Sep 12 22:43:00 EDT 2026
+
+*****IN: Mon Sep 14 11:28:00 EDT 2026
+
+Back to HW3, Problem 3:
+Tried shutting off the kernel and restarting and it did not work. Then I moved the save plot outside of the if statement and it was working, so figured the problem was with the id statement. Tried saving plot to a variable and passing, still did not work. Finally, since save plot is boolean, I tried simplifying the if statement from the advice of a peer. So rather than having if save plot != False: I changed it to if saveplot : and it worked! Wild. 
+Added gridlines, checked that the x array was inclusive, and adjusted font sizes of the title and axis labels. Push to GitHub to save fix.
 
 
 

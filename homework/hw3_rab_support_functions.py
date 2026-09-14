@@ -115,14 +115,15 @@ def squareplot(low, high, num, saveplot=False) :
     # create the plot
     plt.figure( figsize = (10,10))
     plt.scatter( x, y)
+    plt.grid()
 
     # add titles and axis labels
-    plt.title( 'Square Function' )
-    plt.xlabel( 'Input' )
-    plt.ylabel( 'Output' )
+    plt.title( 'Square Function', fontsize = 20 )
+    plt.xlabel( 'Input', fontsize = 12 )
+    plt.ylabel( 'Output', fontsize = 12 )
 
     # save the figure if they want to
-    if saveplot != False :
+    if saveplot :
         plt.savefig('hw3_rab_problem3_graph1.pdf')
 
     # show plot
