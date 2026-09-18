@@ -2,6 +2,8 @@
 
 It contains the functions: 
     'square' which will allow you to square a value or array of values
+    'squareplot' which will create an array from input values and plot 
+        it with it's squares
 """
 
 # import any libraries needed
