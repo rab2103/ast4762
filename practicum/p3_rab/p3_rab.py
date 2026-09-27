@@ -79,3 +79,39 @@ plt.plot(x2, yfit2, color='orange', label='Model 2')
 plt.legend()
 plt.savefig('p3_rab_problem1_graph2.png')
 plt.show()
+
+# problem 2
+print('Problem 2:')
+
+# part a: generate array with 400 data points
+x = np.zeros(400)
+
+# make 396 elements random poisson distribution, last 4 being "noise"
+x[:396] = np.random.poisson(10000,396)
+x[396:] = np.random.uniform(0, 10**6, 4)
+
+# print mean and median with the answers from the array I got:
+print('The original median of the array is: ', np.median(x)) #10005.5
+print('The original mean of the array is: ', np.mean(x))     #15362
+
+# part b: mask the data
+
+# calculate standard deviation:
+st_dev1 = np.std(x)
+print('Standard deviation using np.std of the array: ', st_dev1)
+
+st_dev = np.sqrt(np.mean(x))
+print('Standard deviation using the square root of the mean: ', st_dev)
+
+# find how many data points are more than 5 standard deviations
+# I chose to use the one computed from the mean since the other is unreasonable
+subsample = x[np.where( (x - np.median(x)) < 5 * st_dev )]
+
+# print mean and median with the answers from the clipped array:
+print('The new median of the array is: ', np.median(subsample)) #10005
+print('The new mean of the array is: ', np.mean(subsample))     #10005.97
+
+# calculate new standard deviation:
+st_dev2 = np.std(subsample)
+print('New standard deviation using np.std of the array: ', st_dev2)
+

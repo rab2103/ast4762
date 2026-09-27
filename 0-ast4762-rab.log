@@ -686,5 +686,78 @@ git add .
 git commit -m "Started Hw5"
 git push origin master
 
+Problem 2:
+(a) Decided to create a zeros array like last HW, but we want a Poisson distribution. I looked up "Does numpy have a random poison distribution generator?" Since I know it has a gaussian one from class. It does: np.random.poisson() I also looked up "Does numpy have a random uniform distribution generator?" It does: np.random.uniform() read up on the parameter in order to generate x. Printed x (then removed it) to make sure it looked good and it does!
+Printed mean and median, but every time a new array is generated it could change the answer. The one I got this time gave 100005 for the median and 15362 as the mean. The median is far closer to N. 
+
+(b) not sure if we should use np.std or take the square root of the mean since it is a poisson... In class notes we used np.std, but that gave me a massive standard deviation(56354), whereas when I took the square root of the mean it was much more reasonable(124). Created subsample array using np.where. Checked that the length was 396 which it was! Now the mean and median are very close to each other! Less than 1 of a difference now. New standard deviation using np.std(subsample) is now 99.67, far more reasonable.
+
+Problem 3:
+Created a new sub-subsample in the same way as before lol.
+There was no change from the other one... now I'm thinking he does want to just use std to see the improvement both times? Sending an email for clarity. Will come back to this part of problem 3 once I get clarity lol.
+Part 2 (there's 2 problem 3's?)
+Now I am realizing problem 2 was supposed to be part of practicum? Honestly directions not sure clear. I copied over the problem 2 work so it is in both files and recreated the tar file and re-submitted it. Back to HW5:
+Created hw5_rab_support_functions.py to make sigrej function
+Upon reading further about the function, I do think he wants us to just use std, going back to fix lol, but only in HW5, I think it's fine to leave as it was in P3.
+
+New Answers for Problem 2: 
+(b) After the first run, the new mean was 10645, a lot better than before (15362) but not quite there.
+
+New Answer for Problem 3: 
+Now after doing it twice, we are at 10005.97 for the mean and a new standard deviation of 99.67. Which is what I got using the poisson calculation for standard deviation.
+This might not always get rid of all the bad info. We had to run this twice to get matching data, and if there is a lot of "Bad" data I would imagine it would take many times to get rid of it all.
+Back to sigrej, the docstring summary is:
+"""T'sigrej' which will create a boolean mask that matches the 
+        indices of "good" data from a dataset provided, and given 
+        the desired multiples of standard deviation
+
+    This fucntion will calculate the mean of the given data, find
+    where the data fits within the provided multiples of standard
+    deviation, and return a boolean mask for the good indices of 
+    data.
+"""
+Had to make some syntax errors. I realized he was the boolean mask returned. Having to restart the kernel means I had to recreate the array and as always, that changes the values lol.
+Had to do a lot of finagling as I haven't used boolean masks a lot before. Really just a lot of trial and error. It finally worked!! 
+Also added a simple example for sigrej, found a slight error if passing in a mask (the if check needs to be for all of mask), so it was fixed. 
+
+Problem 4:
+Transferred Jupyter notebook to a hw5_rab.py file
+(a) First connect to Cisco secure and do the 2-factor authentication. Then in the terminal:
+ssh ro235529@stokes.ist.ucf.edu and entering my passcode.
+ 
+(b) I made a file by typing in stokes:
+mkdir hw5_rab 
+
+(c) Then in my terminal I did:
+scp -r /Users/robynbaumann/ast4762/homework/hw5_rab/hw5_rab.py ro235529@stokes.ist.ucf.edu:~/hw5_rab 
+scp -r /Users/robynbaumann/ast4762/homework/hw5_rab/hw5_rab_support_functions.py ro235529@stokes.ist.ucf.edu:~/hw5_rab 
+I then opened the dir with cd hw5_rab in stokes
+
+(d) in stokes:
+module load anaconda
+conda activate ast4762
+python3 hw5_rab.py
+It again took a little while, but it worked :) I ran it twice bc the first run got a good result in problem 2, so it was identical to the info in problem 3 lol. The second run it had the difference so I think it was just a fluke with whatever the random numbers had been.
+
+(e) committed to GitHub again with 
+git add .
+git commit -m "Hw5 Update"
+git push origin master
+
+(f) took a screenshot of the GitHub history with control shift 4, and named it:
+hw5_rab_problem4_image1.png
+Copied it to all appropriate folders
+
+(g) updated stokes:
+scp -r /Users/robynbaumann/ast4762/homework/hw5_rab/hw5_rab_problem4_image1.png ro235529@stokes.ist.ucf.edu:~/hw5_rab 
+
+(h) a. Terminal commands: cp 0-ast4762-rab.log ./homework/hw5_rab 
+	scp -r /Users/robynbaumann/ast4762/homework/hw5_rab/0-ast4762-rab.log ro235529@stokes.ist.ucf.edu:~/hw5_rab to update the whole stokes file
+   b. In stokes I will use: tar zcf hw5_rab.tar.gz hw5_rab
+   c. Use scp ro235529@stokes.ist.ucf.edu:~hw5_rab.tar.gz /Users/robynbaumann/ast4762/homework/handin
+   d. Then open web courses, "Select file" and navigate to the handing folder in finder and select the tar file and hit submit.
+
+(i-j) going to do that rn :)
+
 
 
