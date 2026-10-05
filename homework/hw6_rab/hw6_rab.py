@@ -93,3 +93,32 @@ print('\nThe date the observations for the dark files were made is', objhead['DA
 # I looked up info on the fits file headers, and it is saying that the 
 # time of observation is actually included in the KWARG for "DATE-OBS" 
 # in most modern fit-files. 
+
+# Begin HW 6 Problem 2:
+print('\n Problem 2 in HW6:')
+
+# a-b: create median-combined 2D array from dark arrays
+# using np.median should do the trick, and we have to call it along the 0 axis
+darkmed = np.median(darkarr, axis = 0)
+
+# print pixel value [217,184]
+print('Pixel [217,184] of the median dar array is', darkmed[217,184])
+
+# part c add history entry to the dark file
+darkhead.add_history('Median-Combined Dark Frame Mon Oct 5 13:15:00 EDT 2026 rab')
+# commented out so that it is not added multiple times, here is proof:
+print(darkhead["HISTORY"])
+
+# part d: write darkmed to a new data file
+fits.writeto('dark_13s_med.fits', darkmed, darkhead)
+
+# Subtract the median-combined dark frame from each object frame
+objs = objarr - darkmed
+
+# print pixel [217,184] before and after dark subtraction
+print('Before Dark Subtraction, the pixel is', objarr[0, 217,184])
+print('After Dark Subtraction, the pixel is', objs[0, 217,184])
+
+# create file for the first frame object, updated object header
+objhead.add_history('Dark Frame Subtraction Mon Oct 5 14:24:00 EDT 2026 rab')
+fits.writeto('hw6_rab_prob2_graph1.fits', objs[0], objhead)
