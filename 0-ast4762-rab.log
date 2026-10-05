@@ -759,5 +759,119 @@ scp -r /Users/robynbaumann/ast4762/homework/hw5_rab/hw5_rab_problem4_image1.png 
 
 (i-j) going to do that rn :)
 
+*****OUT: Sat Sep 26 22:55:00 EDT 2026 
+
+*****IN: Sun Sep 27 12:55:00 EDT 2026
+
+Reading Bevington Ch. 4 and taking notes on my iPad. Have to go host a physics 1 exam review, I will be back!
+
+*****OUT: Sun Sep 27 13:37:00 EDT 2026
+
+*****IN: Sun Sep 27 17:23:00 EDT 2026
+
+Exam review went well (if you were curious lol). Back to reading Ch. 4 and taking notes on my iPad. Almost done, taking a break tomtake dinner. 
+
+*****OUT: Sun Sep 27 18:11:00 EDT 2026
+
+*****IN: Sun Sep 27 20:08:00 EDT 2026
+
+Continue reading Ch. 4 and taking notes. 
+Finished Ch. 4. Ch5 is on Monte Carlo Techniques, which we did talk about in class, but it is not on the reading list. Going to skip for now, and move on the Ch.6, again taking notes on my iPad. Got through the first section. Logging off for bed. 
+
+*****OUT: Sun Sep 27 22:04:00 EDT 2026
+
+*****IN: Mon Sep 28 13:46:00 EDT 2026
+
+Brought the Bevington TB to campus, continuing Ch. 6 before class. 
+Class started off with peer reviews of HW5.
+Started lecture on CCDS
+
+*****OUT: Mon Sep 28 16:20:00 EDT 2026
+
+*****IN: Wed Sep 30 13:52:00 EDT 2026
+
+Studied for the quiz before class. Started class by taking Quiz 2. Downloaded material for week 7 material. Started lecture again on CCDs (week 6). Also started lecture on IRR Arrays (week 7). 
+
+*****OUT: Wed Sep 30 16:20:00 EDT 2026
+
+*****IN: Thu Oct 1 20:55:00 EDT
+
+Wanted to at least read over the practicum. It has been a long week *sigh* Anyways, read through the instructions and started practicum 4. It said to just create the HW6 file and do the practicum work in there.
+
+Problem 1: 
+Commands into shell to navigate to homework folder and create Hw5 folder
+cd ast4762 
+cd homework
+mkdir hw6_rab 
+Opened Jupyter Notebook and created the coding assignment hw6_rab.ipynb to work in there, and saved it to the hw6_rab folder. While transfer to a .py file before turning it in. Created header at the top of the file for my name, assignment, and date. Then imported the libraries needed. Also downloaded HW6_data folder and placed in the HW6 folder. Files pushed to Github:
+git add .
+git commit -m "Started P4"
+git push origin master
+
+Honestly, I read through the whole file and I don't initially know what do do. By not hardcoding, it he saying to assign variables and then use the variable to print/work with stuff? Or is he saying not to do that either and rather write functions. It is late, and I'm tired, and I have other HW due tomorrow, so I'll try to squeeze in some work tomorrow morning for this, but hopefully in class I'll get some clarity lol. Also releasing this less than 48 hours before is rough bc I'm on campus 8-10 hours a day for work, research, and all my classes, so my weekday time is very limited.
+
+*****OUT: Thu Oct 1 21:18:00 EDT 2026
+
+*****IN: Fri Oct 2 12:10:00 EDT 2026
+
+Back to P4:
+Problem 2:
+(a) I think I did this correctly, just saving the strings to the hw6_data and .fits to be used later when assigning data
+(b) This one is a little harder as I am unsure about what he means by not hardcoding. Started by making the 2 empty lists be imported later. Had to look up the os command for the data directory and it said to use os.listdir()
+(c) realized I hade to use if __ in filename and filename.endswith() to get the lists to populate correctly, but it seems to be printing what it needs to! The star data seems to be out of order, I printed the whole list and all the files are there, they just aren't in the same order as they are listed in the directory. Will ask in class.
+(d) I just picked the first data in the obj list and printed the x and y dimensions
+(e) Saved the Len of both objfile and darkfile, printed to double check and it looks good!
+
+Problem 3:
+(a) I am debating wether to use np.zeros or np.empty to make the arrays. I think I am going to use zeros for now since that is what I have used in the past, and see if it is done differently in class. Arrays created and the shape is printing correctly!
+(b) I had to look up how to get the header and it is just fits.getheader lol. I think he wants this like a list of headers? Let's try it. DATE-OBS should be in the header, so printing this info from the header. 
+(c) I looked up info on the fits file headers, and it is saying that the time of observation is actually included in the KWARG for "DATE-OBS" in most modern fit-files. I will make note if we discuss this more in class, but for now, I think this is why.
+
+*****OUT: Fri Oct 2 13:09:00 EDT 2026
+
+*****IN: Fri Oct 2 14:28:00 EDT 2026
+
+Logging in for class. Started working on Practicum 4: Professor said to fix the order to just use objfile.sort() and it worked since there are less than 10 files, so the order of the numbers is preserved.
+Started looking at HW information for HW7 since it is a long one.
+
+Going to submit P4 befog heading home. Logging out to transfer the log and submit.
+
+*****OUT: Fri Oct 2 16:24:00 EDT 2026
+
+*****IN: Sat Oct 3 14:36:00 EDT 
+
+Goal for this weekend is to catch up on reading. Finishing Bevington Ch 6 now and taking notes on my iPad. 
+Started Howell Ch. 1 creating a new pdf on my iPad to take notes on. Finished Ch1! Will continue tomorrow.
+
+*****OUT: Sat Oct 3 15:47:00 EDT 2026
+
+*****IN: Sun Oct 4 13:07:00 EDT 2026
+
+Reading Ch 2 of Howell and taking notes on my iPad. Snack break.
+
+*****OUT: Sun Oct 4 14:33:00 EDT 2026
+
+*****IN: Sun Oct 4 16:13:00 EDT 2026
+
+Back to reading Ch 2 of Howell and taking notes in my iPad.
+Finished Howell Reading, moving on the Press TB Ch 14.1-14.3 and 14.8. Taking notes in new pdf on my iPad.
+Finished all the reading! Woo! Will read the Ch 15 Press sections later this week. 
+
+*****OUT: Sun Oct 4 19:10:00 EDT 2026
+
+*****IN: Mon Oct 5 12:54:00 EDT 2026
+
+Working on HW6:
+
+Problem 1 was done during P4, pasted here to make it easier for you to find:
+Commands into shell to navigate to homework folder and create Hw5 folder
+cd ast4762 
+cd homework
+mkdir hw6_rab 
+Opened Jupyter Notebook and created the coding assignment hw6_rab.ipynb to work in there, and saved it to the hw6_rab folder. Will transfer to a .py file before turning it in. Created header at the top of the file for my name, assignment, and date. Then imported the libraries needed. Also downloaded HW6_data folder and placed in the HW6 folder. Files pushed to Github:
+git add .
+git commit -m "Started HW6"
+git push origin master
+
 
 
