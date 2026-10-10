@@ -106,7 +106,7 @@ print('Pixel [217,184] of the median dar array is', darkmed[217,184])
 
 # part c add history entry to the dark file
 darkhead.add_history('Median-Combined Dark Frame Mon Oct 5 13:15:00 EDT 2026 rab')
-# commented out so that it is not added multiple times, here is proof:
+print('History in darkhead:')
 print(darkhead["HISTORY"])
 
 # part d: write darkmed to a new data file
@@ -116,6 +116,7 @@ fits.writeto('dark_13s_med.fits', darkmed, darkhead)
 objs = objarr - darkmed
 
 # print pixel [217,184] before and after dark subtraction
+print('\n')
 print('Before Dark Subtraction, the pixel is', objarr[0, 217,184])
 print('After Dark Subtraction, the pixel is', objs[0, 217,184])
 

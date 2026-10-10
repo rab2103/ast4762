@@ -838,5 +838,99 @@ Going to submit P4 befog heading home. Logging out to transfer the log and submi
 
 *****OUT: Fri Oct 2 16:24:00 EDT 2026
 
+*****IN: Sat Oct 3 14:36:00 EDT 
 
+Goal for this weekend is to catch up on reading. Finishing Bevington Ch 6 now and taking notes on my iPad. 
+Started Howell Ch. 1 creating a new pdf on my iPad to take notes on. Finished Ch1! Will continue tomorrow.
 
+*****OUT: Sat Oct 3 15:47:00 EDT 2026
+
+*****IN: Sun Oct 4 13:07:00 EDT 2026
+
+Reading Ch 2 of Howell and taking notes on my iPad. Snack break.
+
+*****OUT: Sun Oct 4 14:33:00 EDT 2026
+
+*****IN: Sun Oct 4 16:13:00 EDT 2026
+
+Back to reading Ch 2 of Howell and taking notes in my iPad.
+Finished Howell Reading, moving on the Press TB Ch 14.1-14.3 and 14.8. Taking notes in new pdf on my iPad.
+Finished all the reading! Woo! Will read the Ch 15 Press sections later this week. 
+
+*****OUT: Sun Oct 4 19:10:00 EDT 2026
+
+*****IN: Mon Oct 5 12:54:00 EDT 2026
+
+Working on HW6:
+
+Problem 1 was done during P4, pasted here to make it easier for you to find:
+Commands into shell to navigate to homework folder and create Hw5 folder
+cd ast4762 
+cd homework
+mkdir hw6_rab 
+Opened Jupyter Notebook and created the coding assignment hw6_rab.ipynb to work in there, and saved it to the hw6_rab folder. Will transfer to a .py file before turning it in. Created header at the top of the file for my name, assignment, and date. Then imported the libraries needed. Also downloaded HW6_data folder and placed in the HW6 folder. Files pushed to Github:
+git add .
+git commit -m "Started HW6"
+git push origin master
+
+Problem 2:
+a) numpy has a function called median that intakes an array, an axis to compute the median, and can output an array of floats of the computed result. There are some other optional parameters, but I think this is the function the HW is referencing.
+b) apply it to the dark array! Axis =0 so that it computes the median along the columns of the data
+c) Here I had to google how to add a history entry to a header of a fits file. I found that astropy.io has a header.add_history('-') that allows you to add history entries, so I used that. Commented out the line so it would not run anytime I run the code, but printed it to show it had been done.
+d) Unsure if this is to be added to the data file or to the HW6 folder directly, will try to ask during class later. For now writing tot he data folder.
+e) update obj head to say the dark subtraction was done and wrote the first object into a file
+
+Have a meeting, will complete problem 3 after class.
+
+*****OUT: Mon Oct 5 13:31:00 EDT 2026
+
+*****IN: Mon Oct 5 14:27:00 EDT 2026
+
+Logged in for class. Discussing Research Papers - new Week 7 notes folder downloaded and sent to my notes folder.
+
+Continuing HW6:
+Problem 3:
+Transferred Jupyter notebook to a hw6_rab.py file
+(a) First connect to Cisco secure and do the 2-factor authentication. Then in the terminal:
+ssh ro235529@stokes.ist.ucf.edu and entering my passcode.
+ 
+(b) I made a file by typing in stokes:
+mkdir hw6_rab 
+
+(c) Then in my terminal I did:
+scp -r /Users/robynbaumann/ast4762/homework/hw6_rab/hw6_rab.py ro235529@stokes.ist.ucf.edu:~/hw6_rab 
+scp -r /Users/robynbaumann/ast4762/homework/hw6_rab/hw6_data ro235529@stokes.ist.ucf.edu:~/hw6_rab 
+I then opened the dir with cd hw6_rab in stokes
+
+(d) in stokes:
+module load anaconda
+conda activate ast4762
+python3 hw6_rab.py
+It took a while again to load. Turns out satrapy is not in the environment so ran:
+Conda install astropy
+Got this error: RuntimeError("can't start new thread")
+Google said to try:
+pip install astropy --progress-bar off
+It worked!!! Yay :)
+
+(e) committed to GitHub again with 
+git add .
+git commit -m "Hw6 Update"
+git push origin master
+
+(f) took a screenshot of the GitHub history with control shift 4, and named it:
+hw6_rab_problem3_image1.png
+Copied it to all appropriate folders
+
+(g) updated stokes:
+scp -r /Users/robynbaumann/ast4762/homework/hw6_rab/hw6_rab_problem3_image1.png ro235529@stokes.ist.ucf.edu:~/hw6_rab 
+
+(h) a. Terminal commands: cp 0-ast4762-rab.log ./homework/hw6_rab 
+	scp -r /Users/robynbaumann/ast4762/homework/hw6_rab/0-ast4762-rab.log ro235529@stokes.ist.ucf.edu:~/hw6_rab to update the whole stokes file
+   b. In stokes I will use: tar zcf hw6_rab.tar.gz hw6_rab
+   c. Use scp ro235529@stokes.ist.ucf.edu:~hw6_rab.tar.gz /Users/robynbaumann/ast4762/homework/handin
+   d. Then open web courses, "Select file" and navigate to the handing folder in finder and select the tar file and hit submit.
+
+(i-j) going to do that rn :)
+
+*****OUT: Mon Oct 5 16:51:00 EDT 2026
