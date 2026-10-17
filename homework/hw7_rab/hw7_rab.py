@@ -192,8 +192,8 @@ plt.show()
 # uncertainties in variables and first derivatives
 unc_rs = 0.01
 unc_fd = 0.002
-df_drs = fd
-df_dfd = r_star
+df_drs = np.sqrt(fd)
+df_dfd = 0.5 * r_star * (fd)**(-1/2)
 
 # uncertainty is radius of planer
 unc_rp = np.sqrt( (df_drs * unc_rs)**2 + (df_dfd * unc_fd)**2 )

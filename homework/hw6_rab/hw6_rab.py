@@ -13,7 +13,8 @@ from astropy.io import fits
 print('Problem 2 on P4:')
 
 # part a: variables for file directory and extension
-datadir = 'hw6_data/'
+# fixed: edited datadir to be full extension 10/14
+datadir = '/Users/robynbaumann/ast4762/homework/hw6_rab/hw6_data/'
 fext    = '.fits'
 
 # part b: lists to store data
@@ -110,7 +111,7 @@ print('History in darkhead:')
 print(darkhead["HISTORY"])
 
 # part d: write darkmed to a new data file
-fits.writeto('dark_13s_med.fits', darkmed, darkhead)
+fits.writeto('dark_13s_med.fits', darkmed, darkhead, overwrite= True)
 
 # Subtract the median-combined dark frame from each object frame
 objs = objarr - darkmed
@@ -122,4 +123,4 @@ print('After Dark Subtraction, the pixel is', objs[0, 217,184])
 
 # create file for the first frame object, updated object header
 objhead.add_history('Dark Frame Subtraction Mon Oct 5 14:24:00 EDT 2026 rab')
-fits.writeto('hw6_rab_prob2_graph1.fits', objs[0], objhead)
+fits.writeto('hw6_rab_prob2_graph1.fits', objs[0], objhead, overwrite=True)
