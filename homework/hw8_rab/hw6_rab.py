@@ -14,7 +14,7 @@ print('Problem 2 on P4:')
 
 # part a: variables for file directory and extension
 # fixed: edited datadir to be full extension 10/14
-datadir = '/Users/robynbaumann/ast4762/homework/hw6_rab/hw6_data/'
+datadir = '../hw6_rab/hw6_data/'
 fext    = '.fits'
 
 # part b: lists to store data
