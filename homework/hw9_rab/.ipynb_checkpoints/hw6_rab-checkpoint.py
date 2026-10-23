@@ -13,7 +13,10 @@ from astropy.io import fits
 print('Problem 2 on P4:')
 
 # part a: variables for file directory and extension
-datadir = 'hw6_data/'
+# fixed: edited datadir to be full extension 10/14
+#datadir = '/Users/robynbaumann/ast4762/homework/hw6_rab/hw6_data/'
+# for stokes fixed 10/17:
+datadir = '../hw6_rab/hw6_data/'
 fext    = '.fits'
 
 # part b: lists to store data

@@ -45,7 +45,7 @@ print('Last element in objfile is: ',  objfile[-1])
 print('Last element in darkfile is: ', darkfile[-1])
 
 # part d: read one of the objects and assign to x and y
-nx, ny = fits.getdata(datadir + objfile[0]).shape
+ny, nx = fits.getdata(datadir + objfile[0]).shape
 
 # print the size of the files
 print('\n')

@@ -1121,4 +1121,72 @@ I printed them in the file. And commented
 
 *****OUT: Sat Oct 17 17:46:00 EDT 2026
 
+*****IN: Sat Oct 17 18:04:00 EDT 2026 
 
+P5 submitted, let's start HW8:
+
+Problem 1:
+I did this as part of P5, but copying it here. New GitHub Update too.
+Commands into shell to navigate to homeworkfolder and create HW8 folder
+cd ast4762 
+cd homework
+mkdir hw8_rab 
+Opened Jupyter Notebook and created the coding assignment hw8_rab.ipynb to work in there, and saved it to the hw8_rab folder. While transfer to a .py file before turning it in. Created header at the top of the file for my name, assignment, and date. I am certain that he meant HW6 since this hw is a continuation of that. Then imported the libraries needed. Moved over files from HW6 using:
+Cp /Users/robynbaumann/ast4762/homework/hw6_rab/-filename- .
+Files pushed to Github:
+git add .
+git commit -m "Update HW8"
+git push origin master
+
+Problem 2: 
+Went to the support function file and started function skycormednorm(obj, norm, region = None). I brought down lines from the prev function that were similar but changed the shape. I think I got it working! Taking a dinner break before testing it out in stokes and printing all the necessary info.
+
+*****OUT: Sat Oct 17 18:44:00 EDT 2026
+
+*****IN: Sat Oct 17 19:35:00 EDT
+
+Back to HW8, Problem 2:
+I'm getting that the pixel is zero.. I printed the whole array and it has really small numbers and lots of zeros. I looked up if this is expected, and I think it is for this method. 
+I ended up asking AI, I went back and realized when I was editing the P5 function, I mistakenly commented out a line I should have kept! Went and fixed it and re-turned it in. Now it is working!! Not an array of zeros anymore lol.
+
+Problem 3:
+Transferred Jupyter notebook to a hw8_rab.py file
+(a) First connect to Cisco secure and do the 2-factor authentication. Then in the terminal:
+ssh ro235529@stokes.ist.ucf.edu and entering my passcode.
+ 
+(b) I made a file by typing in stokes:
+mkdir hw8_rab 
+
+(c) Then in my terminal I did:
+scp -r /Users/robynbaumann/ast4762/homework/hw8_rab/hw8_rab.py ro235529@stokes.ist.ucf.edu:~/hw8_rab 
+scp -r /Users/robynbaumann/ast4762/homework/hw8_rab/hw6_rab.py ro235529@stokes.ist.ucf.edu:~/hw8_rab 
+scp -r /Users/robynbaumann/ast4762/homework/hw8_rab/hw8_rab_support_functions.py ro235529@stokes.ist.ucf.edu:~/hw8_rab 
+I then opened the dir with cd hw8_rab in stokes
+
+(d) in stokes:
+module load anaconda
+conda activate ast4762
+python3 hw8_rab.py
+It took a while, then it is saying it can't access the data directory, which is kind of what I suspected would happen with the data files not being in the same place, and the directory variable pointing to files locally. In Class Dr. Harrington said they have a way to make sure the computer has access and to NOT include the data files. Let me try running the code locally and see if it works. It worked perfectly fine locally. I changed the directory variable to just be /hw6_rab/hw6_data/ and resent to stokes. That didn't work, uploaded the data file. It worked! Changing the datadir to be '../hw6_rab/hw6_data' from now on.
+
+(e) committed to GitHub again with 
+git add .
+git commit -m "HW8 Update"
+git push origin master
+
+(f) took a screenshot of the GitHub history with control shift 4, and named it:
+hw8_rab_problem3_image1.png
+Copied it to all appropriate folders
+
+(g) updated stokes:
+scp -r /Users/robynbaumann/ast4762/homework/hw8_rab/hw8_rab_problem3_image1.png ro235529@stokes.ist.ucf.edu:~/hw8_rab 
+
+(h) a. Terminal commands: cp 0-ast4762-rab.log ./homework/hw8_rab 
+	scp -r /Users/robynbaumann/ast4762/homework/hw8_rab/0-ast4762-rab.log ro235529@stokes.ist.ucf.edu:~/hw8_rab to update the whole stokes file
+   b. In stokes I will use: tar zcf hw8_rab.tar.gz hw8_rab
+   c. Use scp ro235529@stokes.ist.ucf.edu:~hw8_rab.tar.gz /Users/robynbaumann/ast4762/homework/handin
+   d. Then open web courses, "Select file" and navigate to the handing folder in finder and select the tar file and hit submit.
+
+(i-j) going to do that rn :)
+
+*****OUT: Sat Oct 17 20:43:00 EDT 2026
