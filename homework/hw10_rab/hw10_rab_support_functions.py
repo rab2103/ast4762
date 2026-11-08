@@ -4,6 +4,10 @@ It contains the functions:
     'apphot' which perfoms aperture photometry on an image. It will 
     intake an image and the desired parameters for the photometry
     and return the stellar flux and average sky values.
+
+    'dophot' which takes in a 3D array of obejects, a table tracking
+    the calculated data, and performs photometry on each object 
+    using apphot. Al lthe photometry data is then stored in the table. 
 """
 
 # import necessary libraries
@@ -109,4 +113,72 @@ def apphot(obj, bad_mask, aper_r, inner_r, outer_r, center):
     # return the values
     return flux, avg_sky, nbad_pix
 
+def dophot(table, data, bad_mask, a_r, in_r, out_r):
+    """This function takes in a set of object frames and performs 
+    photometry on each of the objects in the frame, returning the 
+    photometry data in the form of a table.
+
+    Within this function, each object in the data frame will be 
+    passed to the apphot function, and the outcome will be written
+    to the table provided. It will use the same aperture radius and 
+    sky annulus radii for each object in the data frame.
     
+    Parameters
+    ----------
+    table: 3D array
+        this is the 3D array representing the different stars and
+        the information of the star. The table should include the 
+        center of each star and have the following columns:
+        # yguess, xguess, width, cy, cx, star, sky
+        
+    data: 3d array
+        this is the object array, where each frame is a 2D array 
+        of an image
+
+    bad_mask: 
+        2D boolean array that has False for any bad pixels to be 
+        excluded from the calculations
+        
+    a_r : int or float
+        this is the radius aperture disk
+
+    in_r : int or float
+        this is the radius of the inner annulus
+
+    out_r : int or float
+        this is the radius of the outer annulus
+        
+    Returns
+    -------
+    table: 3D array
+        this is the 3D array representing the different stars and
+        the information of the star with the photometry information 
+        now added into the star and sky columns. It has the following
+        format:
+        # yguess, xguess, width, cy, cx, star, sky
+
+    See Also
+    --------
+    apphot : this function is used to calculate the flux from each
+        star and the average sky value
+
+    Examples
+    --------
+    >>>
+    
+    Revisions
+    ---------
+    2026-11-8 ro235529@ucf.edu created the file and function
+    """
+    # find out the size of the data and save indices
+    nstars, nframes, nparams = table.shape
+    yguess, xguess, width, cy, cx, star, sky = 0, 1, 2, 3, 4, 5, 6
+
+    # loop through each object
+    for i in range(nstars):
+        for j in range(nframes):
+            info = apphot(data[j], None, a_r, in_r, out_r, (table[i,j,cy], table[i,j,cx]))
+            table[i, j, star] = info[0]
+            table[i, j, sky]  = info[1] 
+
+    return table
