@@ -1258,5 +1258,76 @@ Worked on in-class assign from the other day.
 
 *****OUT: Fri Oct 23 16:23:00 EDT 2026
 
+*****IN: Fri Oct 23 17:02:00 EDT 2026
+
+Turned in P6, started HW9:
+Problem 1: Copied down from when I started the file in P6:
+Commands into shell to navigate to homework folder and create HW9 folder
+cd ast4762 
+cd homework
+mkdir hw9_rab 
+Opened Jupyter Notebook and created the coding assignment hw9_rab.ipynb to work in there, and saved it to the hw9_rab folder. While transfer to a .py file before turning it in. Created header at the top of the file for my name, assignment, and date. Imported previous HW and imported the libraries needed. Moved over files from HW6 using:
+Cp /Users/robynbaumann/ast4762/homework/hw8_rab/-filename- .
+Cp /Users/robynbaumann/ast4762/homework/hw6_rab/-filename- .
+
+Problem 2:
+A little confused on the directions. Are we supposed to copy all the tables or calculate the values? Is this practice and we will assign the real values later?
+I tried using imshow() to look at the stars, but they definitely aren’t near the numbers provided in the table, so I either messed up the image or I need to fix the numbers. Will ask prof.
+He said the first locations are correct.
+To fill in star 0 location, find it in frame 1 and 2, use DS9-> convert 512 is zero based, so in one based system is 513 (subtract one from fits, add one to python)
+I used a brighter star to get my bearings and adjusted the settings to find the star! Used 99.5% and was able to see it much better. Saved the values.
+I did the calcs for the guesses, then printed the table checked it by inspecting the fits file.
+
+Problem 3:
+We want to make copies of the sub images so we don't accidentally change the data in the original array.
+Honestly, the numbers look a bit off. I triple checked in DS9 that the guesses were accurate, I tried the fit gauss without any guesses, I tried the fit gauss with different widths. The only time it seemed accurate for position was when I fed it an inaccurate width guess of (1,1)
+Tried printing the sub image, found out that they looked wrong. Turns out I was passing the wrong indices to the corrected sky array lol. But not the numbers match! Yay!
+Did a little googling for part b. Dr. Harrington said they wouldn't grade too harshly here, so I went with what the online recommendations were. I knew generally the size comparisons, but needed a lil help with the first one, aperture radius.
+
+Problem 4:
+Transferred Jupyter notebook to a hw9_rab.py file
+(a) First connect to Cisco secure and do the 2-factor authentication. Then in the terminal:
+ssh ro235529@stokes.ist.ucf.edu and entering my passcode.
+ 
+(b) I made a file by typing in stokes:
+mkdir hw9_rab 
+
+(c) Then in my terminal I did:
+scp -r /Users/robynbaumann/ast4762/homework/hw9_rab/hw9_rab.py ro235529@stokes.ist.ucf.edu:~/hw9_rab 
+scp -r /Users/robynbaumann/ast4762/homework/hw9_rab/hw8_rab.py ro235529@stokes.ist.ucf.edu:~/hw9_rab 
+scp -r /Users/robynbaumann/ast4762/homework/hw9_rab/hw6_rab.py ro235529@stokes.ist.ucf.edu:~/hw9_rab 
+scp -r /Users/robynbaumann/ast4762/homework/hw9_rab/hw8_rab_support_functions.py ro235529@stokes.ist.ucf.edu:~/hw9_rab 
+scp -r /Users/robynbaumann/ast4762/homework/hw9_rab/hw9_rab_support_functions.py ro235529@stokes.ist.ucf.edu:~/hw9_rab 
+I then opened the dir with cd hw9_rab in stokes
+
+(d) in stokes:
+module load anaconda
+conda activate ast4762
+python3 hw9_rab.py
+Realized I forgot to transfer over gaussian lol:
+scp -r /Users/robynbaumann/ast4762/homework/hw9_rab/gaussian.py ro235529@stokes.ist.ucf.edu:~/hw9_rab 
+After that it worked! Yay!
+
+(e) committed to GitHub again with 
+git add .
+git commit -m "HW9 Update"
+git push origin master
+
+(f) took a screenshot of the GitHub history with control shift 4, and named it:
+hw9_rab_problem4_image1.png
+Copied it to all appropriate folders
+
+(g) updated stokes:
+scp -r /Users/robynbaumann/ast4762/homework/hw9_rab/hw9_rab_problem4_image1.png ro235529@stokes.ist.ucf.edu:~/hw9_rab 
+
+(h) a. Terminal commands: cp 0-ast4762-rab.log ./homework/hw9_rab 
+	scp -r /Users/robynbaumann/ast4762/homework/hw9_rab/0-ast4762-rab.log ro235529@stokes.ist.ucf.edu:~/hw9_rab to update the whole stokes file
+   b. In stokes I will use: tar zcf hw9_rab.tar.gz hw9_rab
+   c. Use scp ro235529@stokes.ist.ucf.edu:~hw9_rab.tar.gz /Users/robynbaumann/ast4762/homework/handin
+   d. Then open web courses, "Select file" and navigate to the handing folder in finder and select the tar file and hit submit.
+
+(i-j) going to do that rn :)
+
+*****OUT: Fri Oct 23 19:54:00 EDT 2026
 
 
